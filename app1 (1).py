@@ -14,8 +14,8 @@ import joblib
 import numpy as np
 
 # Load the trained model and feature names
-model = joblib.load("/content/drive/MyDrive/xgb_churn_model.pkl")
-feature_names = joblib.load("/content/drive/MyDrive/feature_names.pkl")
+model = joblib.load("xgb_churn_model.pkl")
+feature_names = joblib.load("feature_names.pkl")
 
 # Streamlit App Title
 st.title("🔮 Customer Churn Prediction App")
