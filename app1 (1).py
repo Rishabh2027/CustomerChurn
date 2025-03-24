@@ -7,7 +7,6 @@ Original file is located at
     https://colab.research.google.com/drive/1FudByi0kaYEd9puqX1Oj5jR-34QmZWqJ
 """
 
-pip install streamlit joblib pandas xgboost
 
 import streamlit as st
 import pandas as pd
