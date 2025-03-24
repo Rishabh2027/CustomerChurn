@@ -66,5 +66,5 @@ if st.button("Predict"):
     else:
         st.success(f"✅ Low Churn Risk! Probability: {probability[0]:.2f}")
 
-streamlit run app.py
+
 
