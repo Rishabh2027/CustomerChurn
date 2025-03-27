@@ -28,25 +28,16 @@ def user_input():
     Partner = st.selectbox("Has Partner", [0, 1], format_func=lambda x: "Yes" if x == 1 else "No")
     Dependents = st.selectbox("Has Dependents", [0, 1], format_func=lambda x: "Yes" if x == 1 else "No")
     tenure = st.slider("Tenure (months)", 0, 72, 24)
-    PhoneService = st.selectbox("Phone Service", [0, 1])
-    MultipleLines = st.selectbox("Multiple Lines", [0, 1])
-    InternetService = st.selectbox("Internet Service Type", [0, 2], format_func=lambda x: ["DSL", "Fiber Optic", "No"][x])
-    OnlineSecurity = st.selectbox("Online Security", [0, 1])
-    OnlineBackup = st.selectbox("Online Backup", [0, 1])
-    DeviceProtection = st.selectbox("Device Protection", [0, 1])
-    TechSupport = st.selectbox("Tech Support", [0, 1])
     StreamingTV = st.selectbox("Streaming TV", [0, 1])
     StreamingMovies = st.selectbox("Streaming Movies", [0, 1])
     Contract = st.selectbox("Contract Type", [0, 2], format_func=lambda x: ["Month-to-Month", "One Year", "Two Year"][x])
-    PaperlessBilling = st.selectbox("Paperless Billing", [0, 1])
     PaymentMethod = st.selectbox("Payment Method", [0, 3], format_func=lambda x: ["Electronic Check", "Mailed Check", "Bank Transfer", "Credit Card"][x])
     MonthlyCharges = st.number_input("Monthly Charges ($)", min_value=10.0, max_value=120.0, value=50.0, step=1.0)
     TotalCharges = st.number_input("Total Charges ($)", min_value=0.0, max_value=9000.0, value=1200.0, step=50.0)
 
     # Create DataFrame
-    data = pd.DataFrame([[gender, SeniorCitizen, Partner, Dependents, tenure, PhoneService, MultipleLines,
-                          InternetService, OnlineSecurity, OnlineBackup, DeviceProtection, TechSupport,
-                          StreamingTV, StreamingMovies, Contract, PaperlessBilling, PaymentMethod,
+    data = pd.DataFrame([[gender, SeniorCitizen, Partner, Dependents, tenure,                              
+                          StreamingTV, StreamingMovies, Contract, PaymentMethod,
                           MonthlyCharges, TotalCharges]],
                           columns=feature_names)
 
